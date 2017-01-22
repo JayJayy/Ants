@@ -8,3 +8,14 @@ import Foundation
 public enum AntTaskConfig {
     case ui, background
 }
+
+internal extension AntTaskConfig {
+    func queue() -> DispatchQueue {
+        switch self {
+        case .ui:
+            return DispatchQueue.main
+        case .background:
+            return DispatchQueue(label: "de.johannesstarke.ants.background", qos: .background)
+        }
+    }
+}

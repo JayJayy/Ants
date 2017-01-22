@@ -9,10 +9,14 @@ public struct Ants {
     private static let shared: Ants = Ants()
     
     public static func async(_ block: @escaping (_ ant: Ant) -> ()) {
-        
+        shared.workQueue.async {
+            block(Ant())
+        }
     }
     
+    private let workQueue: DispatchQueue
+    
     private init() {
-        
+        workQueue = DispatchQueue(label: "de.johannesstarke.workQueue")
     }
 }

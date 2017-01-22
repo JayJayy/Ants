@@ -57,8 +57,8 @@ class AntsTests: XCTestCase {
             testExpectation.fulfill()
         }
         
-        waitForExpectations(timeout: 5.0) { error in
-            XCTAssertNotNil(error)
+        waitForExpectations(timeout: 10.0) { error in
+            XCTAssertNil(error)
         }
     }
 }

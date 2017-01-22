@@ -5,8 +5,36 @@
 
 import Foundation
 
+public enum AntError: Error {
+    case emptyResult
+}
+
 public struct Ant {
     public func await<TResult>(result task: AntTask<TResult>) throws -> TResult {
-        return try task.work()
+        let queue = task.config.queue()
+        let sema = DispatchSemaphore(value: 0)
+        
+        var result: TResult?
+        var error: Error?
+        
+        queue.async {
+            do {
+                result = try task.work()
+            } catch let e {
+                error = e
+            }
+            
+            sema.signal()
+        }
+    
+        sema.wait()
+        
+        if let result = result {
+            return result
+        } else if let error = error {
+            throw error
+        } else {
+            throw AntError.emptyResult
+        }
     }
 }
