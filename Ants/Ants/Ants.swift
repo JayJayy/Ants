@@ -8,10 +8,17 @@ import Foundation
 public struct Ants {
     private static let shared: Ants = Ants()
     
-    public static func async(_ block: @escaping (_ ant: Ant) -> ()) {
+    public static func async(_ block: @escaping (_ ant: Ant) -> ()) -> AntQueen {
+        let ant = Ant()
+        let antQueen = AntQueen()
+        
+        antQueen.ant = ant
+        
         shared.workQueue.async {
-            block(Ant())
+            block(ant)
         }
+        
+        return antQueen
     }
     
     private let workQueue: DispatchQueue

@@ -10,6 +10,7 @@
 		50EB8C4C1E34BC0700E82575 /* Ants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432B55BD90C20C2DD910AD1 /* Ants.framework */; };
 		9432B084E3C268281A45B94E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432B34EFDC50125566FAF9A /* Info.plist */; };
 		9432B16103E542F3FB434D8A /* AntError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432B29CC0FB48EFF15ADCAE /* AntError.swift */; };
+		9432B1D9D20E8264AA8A363F /* AntQueen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432BC4D2CFFD8ABDCA56FAF /* AntQueen.swift */; };
 		9432B24CC764511E50E98CCE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432B17E498D3F2A052ABF71 /* Info.plist */; };
 		9432B2A7E44771ECD21CF620 /* Ants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432B55BD90C20C2DD910AD1 /* Ants.framework */; };
 		9432B49121587AF93078F130 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432BCD0AE73341B75871193 /* Info.plist */; };
@@ -57,6 +58,7 @@
 		9432BA5ECC67D9DD35EDD105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9432BA9F4850D670CD09B86E /* AntsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9432BB0414CE06C63FD21DC0 /* AntsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9432BC4D2CFFD8ABDCA56FAF /* AntQueen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntQueen.swift; sourceTree = "<group>"; };
 		9432BC79C621EBE233D04878 /* AntsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntsTests.swift; sourceTree = "<group>"; };
 		9432BCD0AE73341B75871193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		9432BDE61EEBD2FAF8FB94B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9432B2316D7DAA863D4EF8EB /* AntTaskConfig.swift */,
 				9432B982F2C11624CA4B9E4A /* AntTask.swift */,
 				9432B29CC0FB48EFF15ADCAE /* AntError.swift */,
+				9432BC4D2CFFD8ABDCA56FAF /* AntQueen.swift */,
 			);
 			path = Ants;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				9432BC0EC0F16FFF23DBB274 /* AntTaskConfig.swift in Sources */,
 				9432BA9731AE2221FD8CE977 /* AntTask.swift in Sources */,
 				9432B16103E542F3FB434D8A /* AntError.swift in Sources */,
+				9432B1D9D20E8264AA8A363F /* AntQueen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

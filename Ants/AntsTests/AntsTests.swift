@@ -42,7 +42,7 @@ class AntsTests: XCTestCase {
     func testAnt() {
         let testExpectation = expectation(description: "test")
         
-        Ants.async { ant in
+        let _ = Ants.async { ant in
             var current = 0
             
             do {
@@ -56,6 +56,37 @@ class AntsTests: XCTestCase {
             print(current)
             testExpectation.fulfill()
         }
+        
+        waitForExpectations(timeout: 10.0) { error in
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testCancelling() {
+        let testExpectation = expectation(description: "test")
+        
+        let queen = Ants.async { ant in
+            var current = 0
+            
+            do {
+                current = try ant.await(result: TestAntTasks.count(from: current, to: 1000, inBackground: true))
+                current = try ant.await(result: TestAntTasks.count(from: current, to: 2000, inBackground: false))
+                current = try ant.await(result: TestAntTasks.count(from: current, to: 3000, inBackground: true))
+            } catch let error as AntError {
+                switch error {
+                case .emptyResult:
+                    break
+                case .cancelled:
+                    testExpectation.fulfill()
+                }
+            } catch {
+                
+            }
+            
+            print(current)
+        }
+        
+        queen.cancel()
         
         waitForExpectations(timeout: 10.0) { error in
             XCTAssertNil(error)

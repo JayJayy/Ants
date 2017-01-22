@@ -5,8 +5,18 @@
 
 import Foundation
 
-public struct Ant {
+public class Ant {
+    internal var cancelled: Bool = false
+    
+    internal init() {
+    
+    }
+    
     public func await<TResult>(result task: AntTask<TResult>) throws -> TResult {
+        if cancelled {
+            throw AntError.cancelled
+        }
+        
         let queue = task.config.queue()
         let sema = DispatchSemaphore(value: 0)
         
@@ -22,7 +32,7 @@ public struct Ant {
             
             sema.signal()
         }
-    
+        
         sema.wait()
         
         if let result = result {
@@ -32,9 +42,5 @@ public struct Ant {
         } else {
             throw AntError.emptyResult
         }
-    }
-    
-    internal init() {
-        
     }
 }
