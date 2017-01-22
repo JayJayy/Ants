@@ -5,10 +5,6 @@
 
 import Foundation
 
-public enum AntError: Error {
-    case emptyResult
-}
-
 public struct Ant {
     public func await<TResult>(result task: AntTask<TResult>) throws -> TResult {
         let queue = task.config.queue()
@@ -36,5 +32,9 @@ public struct Ant {
         } else {
             throw AntError.emptyResult
         }
+    }
+    
+    internal init() {
+        
     }
 }

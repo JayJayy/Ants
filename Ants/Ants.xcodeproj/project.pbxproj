@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50EB8C4C1E34BC0700E82575 /* Ants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432B55BD90C20C2DD910AD1 /* Ants.framework */; };
 		9432B084E3C268281A45B94E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432B34EFDC50125566FAF9A /* Info.plist */; };
+		9432B16103E542F3FB434D8A /* AntError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432B29CC0FB48EFF15ADCAE /* AntError.swift */; };
 		9432B24CC764511E50E98CCE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432B17E498D3F2A052ABF71 /* Info.plist */; };
 		9432B2A7E44771ECD21CF620 /* Ants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432B55BD90C20C2DD910AD1 /* Ants.framework */; };
 		9432B49121587AF93078F130 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432BCD0AE73341B75871193 /* Info.plist */; };
@@ -45,6 +46,7 @@
 		9432B11B1F0C45909F3332BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9432B17E498D3F2A052ABF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		9432B2316D7DAA863D4EF8EB /* AntTaskConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntTaskConfig.swift; sourceTree = "<group>"; };
+		9432B29CC0FB48EFF15ADCAE /* AntError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntError.swift; sourceTree = "<group>"; };
 		9432B34EFDC50125566FAF9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		9432B3781D50F4909CD158EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9432B52AFA3CF8B37465FAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				9432B8E801C8303FB753DD24 /* Ant.swift */,
 				9432B2316D7DAA863D4EF8EB /* AntTaskConfig.swift */,
 				9432B982F2C11624CA4B9E4A /* AntTask.swift */,
+				9432B29CC0FB48EFF15ADCAE /* AntError.swift */,
 			);
 			path = Ants;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				9432B802ABE46945DCB2E843 /* Ant.swift in Sources */,
 				9432BC0EC0F16FFF23DBB274 /* AntTaskConfig.swift in Sources */,
 				9432BA9731AE2221FD8CE977 /* AntTask.swift in Sources */,
+				9432B16103E542F3FB434D8A /* AntError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
