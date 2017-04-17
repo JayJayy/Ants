@@ -8,8 +8,16 @@ import Foundation
 public class AntQueen {
     internal var ant: Ant?
     
-    public init() {
-        
+    internal let exclusiv: Bool
+    internal let cancelOld: Bool
+    
+    public convenience init() {
+        self.init(exclusiv: false, cancel: false)
+    }
+    
+    public init(exclusiv: Bool, cancel: Bool) {
+        self.exclusiv = exclusiv
+        self.cancelOld = cancel
     }
     
     public func cancel() {

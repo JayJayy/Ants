@@ -86,7 +86,9 @@ class AntsTests: XCTestCase {
             print(current)
         }
         
-        queen.cancel()
+        DispatchQueue(label: "test1").async {
+                                         queen.cancel()
+                                     }
         
         waitForExpectations(timeout: 10.0) { error in
             XCTAssertNil(error)
