@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Ants
+import Ants
 
 struct TestAntTasks {
     static func count(from: Int, to: Int, inBackground background: Bool) -> AntTask<Int> {

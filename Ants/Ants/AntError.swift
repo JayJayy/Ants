@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum AntError: Error {
+public enum AntError: Error {
     case emptyResult
     case cancelled
 }
