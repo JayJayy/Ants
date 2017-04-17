@@ -24,6 +24,6 @@ public struct Ants {
     private let workQueue: DispatchQueue
     
     private init() {
-        workQueue = DispatchQueue(label: "de.johannesstarke.workQueue")
+        workQueue = DispatchQueue(label: "ants.workQueue")
     }
 }

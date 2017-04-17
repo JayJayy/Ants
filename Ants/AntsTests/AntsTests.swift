@@ -25,6 +25,22 @@ struct TestAntTasks {
             
         })
     }
+    
+    static func waitForCompletion() -> AntTask<Int> {
+        let tcs = AntTaskCompletionSource<Int>()
+        
+        DispatchQueue(label: "waiting").async {
+            sleep(2)
+            
+            DispatchQueue.main.async {
+                print("set result")
+                
+                tcs.set(result: 1)
+            }
+        }
+        
+        return tcs.task
+    }
 }
 
 class AntsTests: XCTestCase {
@@ -59,6 +75,26 @@ class AntsTests: XCTestCase {
         
         waitForExpectations(timeout: 10.0) { error in
             XCTAssertNil(error)
+        }
+    }
+    
+    func testCompletionSource() {
+        let testExpectation = expectation(description: "test")
+        
+        let _ = Ants.async { ant in
+            do {
+                let result = try ant.await(result: TestAntTasks.waitForCompletion())
+            } catch {
+            
+            }
+            
+            print("fulfill")
+            
+            testExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10.0) {
+            XCTAssertNil($0)
         }
     }
     

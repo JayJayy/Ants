@@ -24,6 +24,7 @@
 		9432BB3E46F60DD938A35429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9432B11456AA073BC8CEDA3F /* LaunchScreen.storyboard */; };
 		9432BC0EC0F16FFF23DBB274 /* AntTaskConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432B2316D7DAA863D4EF8EB /* AntTaskConfig.swift */; };
 		9432BC61671FC61B571F95AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432B52AFA3CF8B37465FAB5 /* ViewController.swift */; };
+		ADED30E261184CA9766E7CAE /* AntTaskCompletionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADED3575FE86D60CF4D38162 /* AntTaskCompletionSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9432BC79C621EBE233D04878 /* AntsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntsTests.swift; sourceTree = "<group>"; };
 		9432BCD0AE73341B75871193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		9432BDE61EEBD2FAF8FB94B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADED3575FE86D60CF4D38162 /* AntTaskCompletionSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntTaskCompletionSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				9432B982F2C11624CA4B9E4A /* AntTask.swift */,
 				9432B29CC0FB48EFF15ADCAE /* AntError.swift */,
 				9432BC4D2CFFD8ABDCA56FAF /* AntQueen.swift */,
+				ADED3575FE86D60CF4D38162 /* AntTaskCompletionSource.swift */,
 			);
 			path = Ants;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				9432BA9731AE2221FD8CE977 /* AntTask.swift in Sources */,
 				9432B16103E542F3FB434D8A /* AntError.swift in Sources */,
 				9432B1D9D20E8264AA8A363F /* AntQueen.swift in Sources */,
+				ADED30E261184CA9766E7CAE /* AntTaskCompletionSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
