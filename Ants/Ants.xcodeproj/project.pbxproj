@@ -226,9 +226,6 @@
 						DevelopmentTeam = 43Y7S8P4XL;
 						TestTargetID = 9432B838F4D321408E32E954;
 					};
-					9432B838F4D321408E32E954 = {
-						DevelopmentTeam = 43Y7S8P4XL;
-					};
 				};
 			};
 			buildConfigurationList = 9432B2F41FE1E93130ADDF5C /* Build configuration list for PBXProject "Ants" */;
@@ -384,7 +381,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 43Y7S8P4XL;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -460,7 +457,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 43Y7S8P4XL;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
